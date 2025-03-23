@@ -2,7 +2,8 @@
   <div>
     <div class="box">
       <h1 class="text-3xl font-bold mb-3">{{message}}</h1>
-      <label class="input">
+    <div class="flex gap-1.5">
+      <label class="input w-2xl">
         <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
         <input
           type="search"
@@ -12,6 +13,8 @@
           @keyup.enter="searchImage"
         />
       </label>
+      <button class="btn btn-primary" @click="searchImage">Search</button>
+    </div>
     </div>
     <div :class="`mt-10`">
       <div v-if="error_message">
